@@ -1,0 +1,38 @@
+# Energy assumptions of a multi-energy industrial platform (orders of magnitude inspired by public
+# figures of converted refinery sites; nothing here is plant data). Hourly model, one year.
+year: 2027
+latitude_deg: 48.5
+
+pv:
+  annual_energy_mwh: 31000        # scaled so the year produces this energy with nominal availability
+  inverters: 10                   # equal blocks, used for fault scenarios
+  cloud_alpha: 2.2                # daily clearness index ~ Beta(alpha, beta), seasonal mean shift below
+  cloud_beta: 1.6
+
+battery:
+  energy_mwh: 43
+  power_mw: 21.5                  # 2-hour battery
+  efficiency_charge: 0.95
+  efficiency_discharge: 0.95
+  soc_min: 0.10
+  soc_max: 0.95
+  soc_start: 0.50
+
+load:
+  base_mw: 22.0                   # process units and utilities, continuous operation
+  daily_swing_mw: 3.0             # day/night utilities
+  noise_mw: 1.0
+  trips_per_year: 6               # unplanned unit trips: load drops by trip_drop_mw for a few hours
+  trip_drop_mw: 9.0
+  shutdown_days: [[200, 214]]     # planned turnaround: load at shutdown_mw
+  shutdown_mw: 6.0
+
+grid:
+  connection_mw: 40               # import and export limit
+  price_base_eur_mwh: 85
+  price_daily_swing: 35           # evening peak premium
+  price_solar_dip: 45             # mid-day dip on sunny days (can go negative)
+  price_noise: 12
+  export_price_factor: 0.9        # share of the market price received for exported energy
+  co2_base_g_kwh: 45              # grid carbon intensity, higher in winter evenings
+  co2_winter_peak_g_kwh: 60

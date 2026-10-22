@@ -1,0 +1,158 @@
+{
+ "profiles": {
+  "pv_gwh": 31.0,
+  "load_gwh": 194.7,
+  "pv_peak_mw": 34.6,
+  "mean_price": 90.1
+ },
+ "strategies": {
+  "none": {
+   "energy_cost_keur": 17210.5,
+   "import_mwh": 165549.8,
+   "export_mwh": 1815.3,
+   "curtailed_mwh": 0.0,
+   "self_consumption_pct": 94.1,
+   "self_sufficiency_pct": 15.0,
+   "peak_import_mw": 26.6,
+   "co2_t": 9563.2,
+   "battery_cycles": 0.0,
+   "unserved_mwh": 0.0,
+   "saving_vs_none_keur": 0.0,
+   "co2_vs_none_t": 0.0
+  },
+  "self_consumption": {
+   "energy_cost_keur": 17190.3,
+   "import_mwh": 164766.1,
+   "export_mwh": 965.0,
+   "curtailed_mwh": 0.0,
+   "self_consumption_pct": 96.9,
+   "self_sufficiency_pct": 15.4,
+   "peak_import_mw": 26.6,
+   "co2_t": 9527.2,
+   "battery_cycles": 18.2,
+   "unserved_mwh": 0.0,
+   "saving_vs_none_keur": 20.3,
+   "co2_vs_none_t": -36.0
+  },
+  "price_rule": {
+   "energy_cost_keur": 16741.5,
+   "import_mwh": 167255.9,
+   "export_mwh": 1940.9,
+   "curtailed_mwh": 0.0,
+   "self_consumption_pct": 95.2,
+   "self_sufficiency_pct": 15.1,
+   "peak_import_mw": 37.3,
+   "co2_t": 9530.0,
+   "battery_cycles": 344.1,
+   "unserved_mwh": 0.0,
+   "saving_vs_none_keur": 469.0,
+   "co2_vs_none_t": -33.2
+  },
+  "lp_forecast": {
+   "energy_cost_keur": 16536.5,
+   "import_mwh": 168159.8,
+   "export_mwh": 2042.8,
+   "curtailed_mwh": 0.0,
+   "self_consumption_pct": 94.2,
+   "self_sufficiency_pct": 15.0,
+   "peak_import_mw": 40.0,
+   "co2_t": 9520.6,
+   "battery_cycles": 512.9,
+   "unserved_mwh": 0.0,
+   "saving_vs_none_keur": 674.0,
+   "co2_vs_none_t": -42.6
+  },
+  "lp_perfect": {
+   "energy_cost_keur": 16510.3,
+   "import_mwh": 167496.5,
+   "export_mwh": 1329.5,
+   "curtailed_mwh": 0.0,
+   "self_consumption_pct": 96.2,
+   "self_sufficiency_pct": 15.3,
+   "peak_import_mw": 40.0,
+   "co2_t": 9482.0,
+   "battery_cycles": 523.6,
+   "unserved_mwh": 0.0,
+   "saving_vs_none_keur": 700.2,
+   "co2_vs_none_t": -81.2
+  },
+  "lp_forecast_co2": {
+   "energy_cost_keur": 16544.0,
+   "import_mwh": 167987.6,
+   "export_mwh": 1888.0,
+   "curtailed_mwh": 0.0,
+   "self_consumption_pct": 94.4,
+   "self_sufficiency_pct": 15.0,
+   "peak_import_mw": 40.0,
+   "co2_t": 9474.7,
+   "battery_cycles": 509.1,
+   "unserved_mwh": 0.0,
+   "saving_vs_none_keur": 666.5,
+   "co2_vs_none_t": -88.4
+  }
+ },
+ "battery_sweep": [
+  {
+   "battery_mwh": 0.0,
+   "energy_cost_keur": 17210.5,
+   "co2_t": 9563.2,
+   "battery_cycles": 0.0,
+   "saving_keur": 0.0,
+   "marginal_saving_keur_per_mwh": NaN
+  },
+  {
+   "battery_mwh": 10.0,
+   "energy_cost_keur": 17043.1,
+   "co2_t": 9543.0,
+   "battery_cycles": 538.7,
+   "saving_keur": 167.4,
+   "marginal_saving_keur_per_mwh": 16.7
+  },
+  {
+   "battery_mwh": 21.5,
+   "energy_cost_keur": 16854.7,
+   "co2_t": 9526.7,
+   "battery_cycles": 536.9,
+   "saving_keur": 355.8,
+   "marginal_saving_keur_per_mwh": 16.4
+  },
+  {
+   "battery_mwh": 43.0,
+   "energy_cost_keur": 16536.5,
+   "co2_t": 9520.6,
+   "battery_cycles": 512.9,
+   "saving_keur": 674.0,
+   "marginal_saving_keur_per_mwh": 14.8
+  },
+  {
+   "battery_mwh": 64.5,
+   "energy_cost_keur": 16317.8,
+   "co2_t": 9541.7,
+   "battery_cycles": 462.4,
+   "saving_keur": 892.8,
+   "marginal_saving_keur_per_mwh": 10.2
+  },
+  {
+   "battery_mwh": 86.0,
+   "energy_cost_keur": 16147.9,
+   "co2_t": 9552.9,
+   "battery_cycles": 415.5,
+   "saving_keur": 1062.6,
+   "marginal_saving_keur_per_mwh": 7.9
+  }
+ ],
+ "monitoring": {
+  "inverter_fault_start": "2027-05-30",
+  "inverter_detected": "2027-05-30",
+  "inverter_delay_days": 0,
+  "soiling_start": "2027-08-08",
+  "soiling_detected": "2027-08-24",
+  "soiling_delay_days": 16,
+  "soiling_loss_at_detection_pct": 1.2,
+  "fixed_threshold_95_soiling_delay_days": 62,
+  "false_alarms_before_faults": 0,
+  "soiling_energy_lost_mwh_if_cleaned_on_schedule": 147.8,
+  "soiling_energy_lost_mwh_if_cleaned_7_days_after_alarm": 17.8
+ },
+ "runtime_s": 10
+}
